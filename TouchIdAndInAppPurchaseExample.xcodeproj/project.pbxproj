@@ -14,6 +14,8 @@
 		4E1F77121DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F77101DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample.xcdatamodeld */; };
 		4E1F77141DC6D7D40089F423 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E1F77131DC6D7D40089F423 /* Assets.xcassets */; };
 		4E1F77171DC6D7D40089F423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1F77151DC6D7D40089F423 /* LaunchScreen.storyboard */; };
+		4E1F77201DC6F4B30089F423 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F771F1DC6F4B30089F423 /* KeychainWrapper.m */; };
+		4E1F77231DC721D00089F423 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F77221DC721D00089F423 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		4E1F77131DC6D7D40089F423 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E1F77161DC6D7D40089F423 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E1F77181DC6D7D40089F423 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E1F771E1DC6F4B30089F423 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		4E1F771F1DC6F4B30089F423 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		4E1F77211DC721D00089F423 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		4E1F77221DC721D00089F423 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +66,14 @@
 		4E1F77031DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample */ = {
 			isa = PBXGroup;
 			children = (
+				4E1F771E1DC6F4B30089F423 /* KeychainWrapper.h */,
+				4E1F771F1DC6F4B30089F423 /* KeychainWrapper.m */,
 				4E1F77071DC6D7D40089F423 /* AppDelegate.h */,
 				4E1F77081DC6D7D40089F423 /* AppDelegate.m */,
 				4E1F770A1DC6D7D40089F423 /* ViewController.h */,
 				4E1F770B1DC6D7D40089F423 /* ViewController.m */,
+				4E1F77211DC721D00089F423 /* WebViewController.h */,
+				4E1F77221DC721D00089F423 /* WebViewController.m */,
 				4E1F770D1DC6D7D40089F423 /* Main.storyboard */,
 				4E1F77131DC6D7D40089F423 /* Assets.xcassets */,
 				4E1F77151DC6D7D40089F423 /* LaunchScreen.storyboard */,
@@ -155,9 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E1F770C1DC6D7D40089F423 /* ViewController.m in Sources */,
+				4E1F77231DC721D00089F423 /* WebViewController.m in Sources */,
 				4E1F77121DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample.xcdatamodeld in Sources */,
 				4E1F77091DC6D7D40089F423 /* AppDelegate.m in Sources */,
 				4E1F77061DC6D7D40089F423 /* main.m in Sources */,
+				4E1F77201DC6F4B30089F423 /* KeychainWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +289,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B95D68F925;
 				INFOPLIST_FILE = TouchIdAndInAppPurchaseExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantagram.TouchIdAndInAppPurchaseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,6 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B95D68F925;
 				INFOPLIST_FILE = TouchIdAndInAppPurchaseExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fantagram.TouchIdAndInAppPurchaseExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
