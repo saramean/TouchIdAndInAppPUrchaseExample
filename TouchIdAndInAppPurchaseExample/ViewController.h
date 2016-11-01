@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WebViewController.h"
+#import "FunctionChoiceViewController.h"
+#import "KeychainWrapper.h"
+@import LocalAuthentication;
+
+@protocol ViewControllerDelegate <NSObject>
+
+- (void) keychainDelivery:(KeychainWrapper *) keychainWrapperForPassword;
+
+@end
 
 @interface ViewController : UIViewController<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *mainPasswordTextField;
@@ -19,6 +27,7 @@
 @property (strong, nonatomic) IBOutlet UIView *passwordConfirmView;
 @property (strong, nonatomic) KeychainWrapper *keychainWrapperForPassword;
 @property (weak, nonatomic) IBOutlet UIButton *resetPasswordBtn;
+@property (weak, nonatomic) id<ViewControllerDelegate> delegate;
 
 - (IBAction)loginWithTouchIDTouched:(id)sender;
 - (IBAction)loginBtnTouched:(id)sender;

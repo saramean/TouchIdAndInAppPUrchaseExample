@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
+    ViewController *viewController = (__kindof UIViewController *) navigationController.topViewController;
+    viewController.delegate = self;
     return YES;
 }
 
@@ -26,10 +30,24 @@
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
 
+//get key chain from view controller by delegate
+- (void) keychainDelivery:(KeychainWrapper *)keychainWrapperForPassword{
+    self.keychainWrapperForPassword = keychainWrapperForPassword;
+}
+
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    HideInfoViewController *hideInfoViewController = [storyBoard instantiateViewControllerWithIdentifier:@"HideInfoViewController"];
+    hideInfoViewController.keychainWrapperForPassword = self.keychainWrapperForPassword;
+    UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
+    
+    NSLog(@"%@", navigationController.visibleViewController);
+    if(![navigationController.topViewController isKindOfClass:[ViewController class]]){
+        [navigationController pushViewController:hideInfoViewController animated:YES];
+    }
 }
 
 

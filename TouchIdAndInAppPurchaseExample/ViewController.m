@@ -28,6 +28,9 @@
     self.keychainWrapperForPassword = [[KeychainWrapper alloc] init];
     //check existing password
     self.passwordSet = [[NSUserDefaults standardUserDefaults] boolForKey:@"passwordSet"];
+    if(self.passwordSet){
+        [self.delegate keychainDelivery:self.keychainWrapperForPassword];
+    }
     self.resetPasswordBtn.enabled = self.passwordSet;
     
 }
@@ -102,7 +105,6 @@
 
 
 - (IBAction)loginBtnTouched:(id)sender {
-    NSLog(@"%@",[self.keychainWrapperForPassword myObjectForKey:(__bridge id)kSecValueData]);
     if([self.mainPasswordTextField.text isEqualToString:[self.keychainWrapperForPassword myObjectForKey:(__bridge id)kSecValueData]]){
         self.mainPasswordTextField.text = nil;
         [self performSegueWithIdentifier:@"authenticationSuccess" sender:self];
@@ -137,6 +139,7 @@
         self.passwordSet = YES;
         self.resetPasswordBtn.enabled = self.passwordSet;
         [[NSUserDefaults standardUserDefaults] setBool:self.passwordSet forKey:@"passwordSet"];
+        [self.delegate keychainDelivery:self.keychainWrapperForPassword];
         [self.passwordConfirmView removeFromSuperview];
         [self.passwordCreationView removeFromSuperview];
         [self.passwordConfirmTextField resignFirstResponder];
@@ -162,9 +165,9 @@
     [self.keychainWrapperForPassword resetKeychainItem];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    WebViewController *webViewController = [segue destinationViewController];
-    webViewController.keychainWrapperForPassword = self.keychainWrapperForPassword;
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    FunctionChoiceViewController *functionChoiceViewController = [segue destinationViewController];
+//    functionChoiceViewController.keychainWrapperForPassword = self.keychainWrapperForPassword;
+//}
 
 @end

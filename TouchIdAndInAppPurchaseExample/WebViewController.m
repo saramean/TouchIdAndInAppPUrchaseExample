@@ -20,62 +20,13 @@
     self.authWebViewAddressField.delegate = self;
     self.authWebView.delegate = self;
     self.activityIndicatorView.hidden = YES;
-    self.authWebViewHidden = NO;
     [self.authWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.com"]]];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideWebView) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authForWebView) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) hideWebView {
-    self.viewForHideAuthWebView.frame = self.view.frame;
-    [self.view addSubview:self.viewForHideAuthWebView];
-    self.authWebViewHidden = YES;
-}
-
-- (void) authForWebView {
-    if(self.authWebViewHidden == YES){
-        LAContext *contextForAuth = [[LAContext alloc] init];
-        NSError *authError = nil;
-        NSString *reasonForTouchID = @"To see web browser, please authenticate yourself";
-        
-        if([contextForAuth canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&authError]){
-            [contextForAuth evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:reasonForTouchID reply:^(BOOL success, NSError * _Nullable error) {
-                if(success){
-                    NSLog(@"success");
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        self.authWebViewHidden = NO;
-                        [self.viewForHideAuthWebView removeFromSuperview];
-                    });
-                }
-                else{
-                    NSLog(@"failed error is %@",error);
-                }
-            }];
-        }
-        else{
-            [self.authWebViewPasswordField becomeFirstResponder];
-        }
-    }
-}
-
-- (IBAction)authWebViewConfirmBtnTouched:(id)sender {
-    if([self.authWebViewPasswordField.text isEqualToString:[self.keychainWrapperForPassword myObjectForKey:(__bridge id)kSecValueData]]){
-        self.authWebViewHidden = NO;
-        self.authWebViewPasswordField.text = nil;
-        [self.viewForHideAuthWebView removeFromSuperview];
-    }
-    else{
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Incorrect Password" message:@"Check your password again" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:OKAction];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -116,7 +67,7 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    self.authWebViewAddressField.text = request.URL.absoluteString;
+    self.authWebViewAddressField.text =[NSString stringWithFormat:@"%@", request.URL.absoluteURL];
     return YES;
 }
 
@@ -140,8 +91,8 @@
     [self.authWebViewAddressField resignFirstResponder];
 }
 
-- (IBAction)backToAuthBtnTouched:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)backToFunctionChoiceBtnTouched:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

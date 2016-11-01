@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AYX-5P-jXQ">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,7 +74,7 @@
                         <outlet property="passwordCreationTextField" destination="ht0-HN-zq4" id="AAl-F7-bTR"/>
                         <outlet property="passwordCreationView" destination="Jtj-l7-c0U" id="pnj-1i-XNE"/>
                         <outlet property="resetPasswordBtn" destination="LJS-nW-Ow2" id="34a-AD-cEy"/>
-                        <segue destination="7vQ-K5-K02" kind="presentation" identifier="authenticationSuccess" id="48f-dw-9bJ"/>
+                        <segue destination="vG6-1m-lzm" kind="show" identifier="authenticationSuccess" id="JmI-4z-Ocl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -153,6 +152,105 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
+        <!--Function Choice View Controller-->
+        <scene sceneID="4Km-jv-3Sg">
+            <objects>
+                <viewController id="vG6-1m-lzm" customClass="FunctionChoiceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tJN-UX-6I6"/>
+                        <viewControllerLayoutGuide type="bottom" id="LvS-QN-S96"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yWt-al-JsM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f8V-RO-4EH">
+                                <frame key="frameInset" minX="49.63%" minY="49.85%" width="240" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQV-cP-wWe">
+                                        <frame key="frameInset" minX="49.59%" minY="19.94%" width="117" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Secret Web View"/>
+                                        <connections>
+                                            <segue destination="7vQ-K5-K02" kind="show" identifier="authWebViewPresent" id="9Af-LZ-hPd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rda-uL-Efh">
+                                        <frame key="frameInset" minX="49.59%" minY="50.00%" width="119" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Secret Function 1"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXC-ne-8jv">
+                                        <frame key="frameInset" minX="50.42%" minY="78.76%" width="121" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Secret Function 2"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1R-Il-gnT">
+                                <frame key="frameInset" minX="26" minY="25" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="functionChoiceBackBtnTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="vE9-EF-Ni5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6Z-eL-rQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2269.5999999999999" y="138.98050974512745"/>
+        </scene>
+        <!--Hide Info View Controller-->
+        <scene sceneID="Nch-Mm-ILN">
+            <objects>
+                <viewController storyboardIdentifier="HideInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pg3-aN-TOM" customClass="HideInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pwf-CB-dCu"/>
+                        <viewControllerLayoutGuide type="bottom" id="P2f-Z0-vii"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QTw-J3-7t1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ai6-we-2Kq">
+                                <frame key="frameInset" minX="50.00%" minY="14.22%" width="313" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Xh-af-SQR">
+                                <frame key="frameInset" minX="50.00%" minY="23.55%" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bl-k6-0pi">
+                                <frame key="frameInset" minX="50.00%" minY="49.92%" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="authWebViewConfirmBtnTouched:" destination="7vQ-K5-K02" eventType="touchUpInside" id="TEZ-gI-vQA"/>
+                                    <action selector="hideInfoConfirmBtnTouched:" destination="pg3-aN-TOM" eventType="touchUpInside" id="8rD-fF-0XI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="hideInfoPasswordField" destination="8Xh-af-SQR" id="87P-Hy-NOd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nZP-GL-0oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2270" y="-514"/>
+        </scene>
         <!--Web View Controller-->
         <scene sceneID="4Ao-P9-n0B">
             <objects>
@@ -181,7 +279,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Back"/>
                                         <connections>
-                                            <action selector="backToAuthBtnTouched:" destination="7vQ-K5-K02" eventType="touchUpInside" id="HD3-aZ-jfy"/>
+                                            <action selector="backToFunctionChoiceBtnTouched:" destination="7vQ-K5-K02" eventType="touchUpInside" id="NSA-wi-2nt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -238,47 +336,16 @@
                         <outlet property="activityIndicatorView" destination="g5a-pn-o1C" id="jTm-If-tPt"/>
                         <outlet property="authWebView" destination="k5E-tx-ISz" id="5s9-cZ-Ecx"/>
                         <outlet property="authWebViewAddressField" destination="y5m-gb-gBi" id="YnH-db-Rra"/>
-                        <outlet property="authWebViewPasswordField" destination="cJ4-hJ-r0c" id="5Eo-3M-Qgg"/>
-                        <outlet property="viewForHideAuthWebView" destination="ALV-VY-6Kf" id="rzO-Fb-qoQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaR-Z7-Mcz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="ALV-VY-6Kf">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHA-eK-IBe">
-                            <frame key="frameInset" minX="46.77%" minY="14.22%" width="313" height="41"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJ4-hJ-r0c">
-                            <frame key="frameInset" minX="49.28%" minY="23.55%" width="97" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
-                        </textField>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYx-V2-QU2">
-                            <frame key="frameInset" minX="49.38%" minY="49.92%" width="55" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Confirm"/>
-                            <connections>
-                                <action selector="authWebViewConfirmBtnTouched:" destination="7vQ-K5-K02" eventType="touchUpInside" id="vaM-dd-Wza"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
                 <tapGestureRecognizer id="jvc-Ie-RYs">
                     <connections>
                         <action selector="addressFieldResignWhenWebViewTapped:" destination="7vQ-K5-K02" id="LJ1-4p-IxW"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2484" y="139"/>
+            <point key="canvasLocation" x="3254" y="-514"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVX-Al-plf">

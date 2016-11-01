@@ -16,6 +16,8 @@
 		4E1F77171DC6D7D40089F423 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1F77151DC6D7D40089F423 /* LaunchScreen.storyboard */; };
 		4E1F77201DC6F4B30089F423 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F771F1DC6F4B30089F423 /* KeychainWrapper.m */; };
 		4E1F77231DC721D00089F423 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F77221DC721D00089F423 /* WebViewController.m */; };
+		4E603DE91DC842F4000353C1 /* FunctionChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E603DE81DC842F4000353C1 /* FunctionChoiceViewController.m */; };
+		4E603DF51DC85C87000353C1 /* HideInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E603DF41DC85C87000353C1 /* HideInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		4E1F771F1DC6F4B30089F423 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		4E1F77211DC721D00089F423 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		4E1F77221DC721D00089F423 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		4E603DE71DC842F4000353C1 /* FunctionChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionChoiceViewController.h; sourceTree = "<group>"; };
+		4E603DE81DC842F4000353C1 /* FunctionChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionChoiceViewController.m; sourceTree = "<group>"; };
+		4E603DF31DC85C87000353C1 /* HideInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideInfoViewController.h; sourceTree = "<group>"; };
+		4E603DF41DC85C87000353C1 /* HideInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +78,12 @@
 				4E1F77081DC6D7D40089F423 /* AppDelegate.m */,
 				4E1F770A1DC6D7D40089F423 /* ViewController.h */,
 				4E1F770B1DC6D7D40089F423 /* ViewController.m */,
+				4E603DE71DC842F4000353C1 /* FunctionChoiceViewController.h */,
+				4E603DE81DC842F4000353C1 /* FunctionChoiceViewController.m */,
 				4E1F77211DC721D00089F423 /* WebViewController.h */,
 				4E1F77221DC721D00089F423 /* WebViewController.m */,
+				4E603DF31DC85C87000353C1 /* HideInfoViewController.h */,
+				4E603DF41DC85C87000353C1 /* HideInfoViewController.m */,
 				4E1F770D1DC6D7D40089F423 /* Main.storyboard */,
 				4E1F77131DC6D7D40089F423 /* Assets.xcassets */,
 				4E1F77151DC6D7D40089F423 /* LaunchScreen.storyboard */,
@@ -123,7 +133,7 @@
 				TargetAttributes = {
 					4E1F77001DC6D7D40089F423 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = B95D68F925;
+						DevelopmentTeam = PHWL2556FT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -164,9 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E603DF51DC85C87000353C1 /* HideInfoViewController.m in Sources */,
 				4E1F770C1DC6D7D40089F423 /* ViewController.m in Sources */,
 				4E1F77231DC721D00089F423 /* WebViewController.m in Sources */,
 				4E1F77121DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample.xcdatamodeld in Sources */,
+				4E603DE91DC842F4000353C1 /* FunctionChoiceViewController.m in Sources */,
 				4E1F77091DC6D7D40089F423 /* AppDelegate.m in Sources */,
 				4E1F77061DC6D7D40089F423 /* main.m in Sources */,
 				4E1F77201DC6F4B30089F423 /* KeychainWrapper.m in Sources */,
@@ -287,11 +299,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B95D68F925;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PHWL2556FT;
 				INFOPLIST_FILE = TouchIdAndInAppPurchaseExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fantagram.TouchIdAndInAppPurchaseExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.newwith.fastWithOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -300,11 +313,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B95D68F925;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = PHWL2556FT;
 				INFOPLIST_FILE = TouchIdAndInAppPurchaseExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fantagram.TouchIdAndInAppPurchaseExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.newwith.fastWithOne;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -328,6 +342,7 @@
 				4E1F771D1DC6D7D40089F423 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
