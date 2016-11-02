@@ -207,7 +207,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="buySecretFunction1SpecialOffer" destination="256-u6-Ot6" id="qhw-zq-Op5"/>
+                        <outlet property="buySecretFunction1TextView" destination="xN7-fq-SX3" id="abu-fW-S0S"/>
                         <outlet property="buySecretFunction1View" destination="Le5-ZH-N8J" id="agV-37-FIf"/>
+                        <outlet property="buySecretFunction2SpecialOffer" destination="JgT-vp-5Il" id="29W-sb-m01"/>
+                        <outlet property="buySecretFunction2TextView" destination="4GJ-9J-Bas" id="aeR-Sb-GkZ"/>
                         <outlet property="buySecretFunction2View" destination="Ar4-Sy-axD" id="EBU-ZJ-iWd"/>
                         <outlet property="specialOfferViewSecretFunc1" destination="R4j-bA-1YO" id="2RA-Pw-mLc"/>
                         <outlet property="specialOfferViewSecretFunc2" destination="Isl-w6-y1s" id="KGE-r4-gLH"/>
@@ -223,19 +227,17 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xN7-fq-SX3">
-                                    <frame key="frameInset" minX="4.27%" minY="65.39%" width="95.47%" height="160"/>
+                                    <frame key="frameInset" minX="4.27%" minY="65.39%" width="91.47%" height="160"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <string key="text"> To use this feature, you need to pay for it.
  This feature let you blah blah blah.
- The price of this feature is 1.99 US dollar.
- Now here is special promotion for you!
- If you buy Secret Function1 and Secret Function2 together, We offer this two feature with 2.99 US dollar.</string>
+ The price of this feature is PRICE1.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvB-HO-dfm">
-                                    <frame key="frameInset" minX="50.29%" minY="18.31%" width="202" height="21"/>
+                                    <frame key="frameInset" minX="50.29%" minY="18.88%" width="202" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                     <nil key="textColor"/>
@@ -246,7 +248,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-vD-D5Y">
-                                            <frame key="frameInset" minY="47.62%" width="108" height="31" maxX="62"/>
+                                            <frame key="frameInset" minY="50.00%" width="108" height="30" maxX="8"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Buy this feature"/>
                                             <connections>
@@ -254,25 +256,32 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWZ-1a-rO0">
-                                            <frame key="frameInset" minX="63" minY="47.62%" width="48" height="31"/>
+                                            <frame key="frameInset" minX="8" minY="50.00%" width="48" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Cancel"/>
                                             <connections>
                                                 <action selector="dismissSecretFucntionViewsCancelBtnTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="l5z-EG-mqw"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKA-7K-xdJ">
+                                            <frame key="frameInset" minX="35.16%" minY="50.00%" width="156" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Restore Purchasement"/>
+                                            <connections>
+                                                <action selector="restorePurchasementBtnTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="WPw-20-RU4"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-bA-1YO">
                             <frame key="frameInset" minY="346" height="83.80%"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special Offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-JP-n8J">
-                                    <frame key="frameInset" minX="111" minY="24" width="153" height="21"/>
+                                    <frame key="frameInset" minX="111" minY="24" width="153" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                     <nil key="textColor"/>
@@ -290,7 +299,8 @@
                                     <frame key="frameInset" minX="50.00%" minY="49.65%" width="343" height="128"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <string key="text">Now here is special promotion for you!
+ If you buy Secret Function1 and Secret Function2 together, We offer this two feature with PRICE3.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
@@ -309,7 +319,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special Offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYT-8v-m1E">
-                                    <frame key="frameInset" minX="111" minY="24" width="153" height="21"/>
+                                    <frame key="frameInset" minX="111" minY="24" width="153" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                     <nil key="textColor"/>
@@ -327,7 +337,8 @@
                                     <frame key="frameInset" minX="50.00%" minY="49.65%" width="343" height="128"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <string key="text">Now here is special promotion for you!
+ If you buy Secret Function1 and Secret Function2 together, We offer this two feature with PRICE3.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
@@ -335,8 +346,8 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-Gu-8m6">
-                            <frame key="frameInset" width="375" height="316"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <frame key="frameInset" height="47.38%"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcM-dW-swu">
                                     <frame key="frameInset" minX="50.29%" minY="18.88%" width="202" height="30"/>
@@ -351,9 +362,7 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <string key="text"> To use this feature, you need to pay for it.
  This feature let you blah blah blah.
- The price of this feature is 1.99 US dollar.
- Now here is special promotion for you!
- If you buy Secret Function1 and Secret Function2 together, We offer this two feature with 2.99 US dollar.</string>
+ The price of this feature is PRICE2.</string>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
@@ -362,7 +371,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-aM-zKk">
-                                            <frame key="frameInset" minX="63" minY="45.45%" width="48" height="30"/>
+                                            <frame key="frameInset" minX="8" minY="50.00%" width="48" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Cancel"/>
                                             <connections>
@@ -370,11 +379,19 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6d-oe-Rzk">
-                                            <frame key="frameInset" minY="45.45%" width="108" height="30" maxX="62"/>
+                                            <frame key="frameInset" minY="50.00%" width="108" height="30" maxX="8"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Buy this feature"/>
                                             <connections>
                                                 <action selector="buySecretFunction2OnlyTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="GPi-Qa-Y6l"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QI-Ir-LIu">
+                                            <frame key="frameInset" minX="35.16%" minY="50.00%" width="156" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Restore Purchasement"/>
+                                            <connections>
+                                                <action selector="restorePurchasementBtnTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="F98-cq-ZyH"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -402,7 +419,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 1 Purchased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f47-OI-4hs">
-                                <frame key="frameInset" minX="50.00%" minY="19.97%" width="219" height="21"/>
+                                <frame key="frameInset" minX="50.65%" minY="19.97%" width="221" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -437,8 +454,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 2 Purchased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo4-lk-ukc">
-                                <frame key="frameInset" minX="78" minY="129" width="221" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <frame key="frameInset" minX="50.65%" minY="19.97%" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

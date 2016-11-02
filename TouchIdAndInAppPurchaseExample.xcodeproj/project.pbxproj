@@ -21,6 +21,7 @@
 		4E603DF81DC86F71000353C1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E603DF71DC86F71000353C1 /* StoreKit.framework */; };
 		4E88AD621DC88BE800C79102 /* SecretFunction1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E88AD611DC88BE800C79102 /* SecretFunction1ViewController.m */; };
 		4E88AD651DC88BFC00C79102 /* SecretFunction2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E88AD641DC88BFC00C79102 /* SecretFunction2ViewController.m */; };
+		4ECC46DE1DC97E0B00415FF5 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECC46DD1DC97E0B00415FF5 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		4E88AD611DC88BE800C79102 /* SecretFunction1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretFunction1ViewController.m; sourceTree = "<group>"; };
 		4E88AD631DC88BFC00C79102 /* SecretFunction2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretFunction2ViewController.h; sourceTree = "<group>"; };
 		4E88AD641DC88BFC00C79102 /* SecretFunction2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretFunction2ViewController.m; sourceTree = "<group>"; };
+		4ECC46DC1DC97E0B00415FF5 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4ECC46DD1DC97E0B00415FF5 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +85,7 @@
 		4E1F77031DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample */ = {
 			isa = PBXGroup;
 			children = (
-				4E1F771E1DC6F4B30089F423 /* KeychainWrapper.h */,
-				4E1F771F1DC6F4B30089F423 /* KeychainWrapper.m */,
+				4ECC46DB1DC97DD800415FF5 /* Helper classes */,
 				4E1F77071DC6D7D40089F423 /* AppDelegate.h */,
 				4E1F77081DC6D7D40089F423 /* AppDelegate.m */,
 				4E1F770A1DC6D7D40089F423 /* ViewController.h */,
@@ -122,6 +124,17 @@
 				4E603DF71DC86F71000353C1 /* StoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ECC46DB1DC97DD800415FF5 /* Helper classes */ = {
+			isa = PBXGroup;
+			children = (
+				4E1F771E1DC6F4B30089F423 /* KeychainWrapper.h */,
+				4E1F771F1DC6F4B30089F423 /* KeychainWrapper.m */,
+				4ECC46DC1DC97E0B00415FF5 /* Reachability.h */,
+				4ECC46DD1DC97E0B00415FF5 /* Reachability.m */,
+			);
+			name = "Helper classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +217,7 @@
 				4E603DF51DC85C87000353C1 /* HideInfoViewController.m in Sources */,
 				4E1F770C1DC6D7D40089F423 /* ViewController.m in Sources */,
 				4E1F77231DC721D00089F423 /* WebViewController.m in Sources */,
+				4ECC46DE1DC97E0B00415FF5 /* Reachability.m in Sources */,
 				4E1F77121DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample.xcdatamodeld in Sources */,
 				4E603DE91DC842F4000353C1 /* FunctionChoiceViewController.m in Sources */,
 				4E88AD651DC88BFC00C79102 /* SecretFunction2ViewController.m in Sources */,
