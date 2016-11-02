@@ -18,6 +18,9 @@
 		4E1F77231DC721D00089F423 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1F77221DC721D00089F423 /* WebViewController.m */; };
 		4E603DE91DC842F4000353C1 /* FunctionChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E603DE81DC842F4000353C1 /* FunctionChoiceViewController.m */; };
 		4E603DF51DC85C87000353C1 /* HideInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E603DF41DC85C87000353C1 /* HideInfoViewController.m */; };
+		4E603DF81DC86F71000353C1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E603DF71DC86F71000353C1 /* StoreKit.framework */; };
+		4E88AD621DC88BE800C79102 /* SecretFunction1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E88AD611DC88BE800C79102 /* SecretFunction1ViewController.m */; };
+		4E88AD651DC88BFC00C79102 /* SecretFunction2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E88AD641DC88BFC00C79102 /* SecretFunction2ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,11 @@
 		4E603DE81DC842F4000353C1 /* FunctionChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionChoiceViewController.m; sourceTree = "<group>"; };
 		4E603DF31DC85C87000353C1 /* HideInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HideInfoViewController.h; sourceTree = "<group>"; };
 		4E603DF41DC85C87000353C1 /* HideInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HideInfoViewController.m; sourceTree = "<group>"; };
+		4E603DF71DC86F71000353C1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4E88AD601DC88BE800C79102 /* SecretFunction1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretFunction1ViewController.h; sourceTree = "<group>"; };
+		4E88AD611DC88BE800C79102 /* SecretFunction1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretFunction1ViewController.m; sourceTree = "<group>"; };
+		4E88AD631DC88BFC00C79102 /* SecretFunction2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretFunction2ViewController.h; sourceTree = "<group>"; };
+		4E88AD641DC88BFC00C79102 /* SecretFunction2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretFunction2ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E603DF81DC86F71000353C1 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +67,7 @@
 			children = (
 				4E1F77031DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample */,
 				4E1F77021DC6D7D40089F423 /* Products */,
+				4E603DF61DC86F71000353C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +95,10 @@
 				4E603DF31DC85C87000353C1 /* HideInfoViewController.h */,
 				4E603DF41DC85C87000353C1 /* HideInfoViewController.m */,
 				4E1F770D1DC6D7D40089F423 /* Main.storyboard */,
+				4E88AD601DC88BE800C79102 /* SecretFunction1ViewController.h */,
+				4E88AD611DC88BE800C79102 /* SecretFunction1ViewController.m */,
+				4E88AD631DC88BFC00C79102 /* SecretFunction2ViewController.h */,
+				4E88AD641DC88BFC00C79102 /* SecretFunction2ViewController.m */,
 				4E1F77131DC6D7D40089F423 /* Assets.xcassets */,
 				4E1F77151DC6D7D40089F423 /* LaunchScreen.storyboard */,
 				4E1F77181DC6D7D40089F423 /* Info.plist */,
@@ -100,6 +114,14 @@
 				4E1F77051DC6D7D40089F423 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4E603DF61DC86F71000353C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E603DF71DC86F71000353C1 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +157,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = PHWL2556FT;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -179,6 +206,8 @@
 				4E1F77231DC721D00089F423 /* WebViewController.m in Sources */,
 				4E1F77121DC6D7D40089F423 /* TouchIdAndInAppPurchaseExample.xcdatamodeld in Sources */,
 				4E603DE91DC842F4000353C1 /* FunctionChoiceViewController.m in Sources */,
+				4E88AD651DC88BFC00C79102 /* SecretFunction2ViewController.m in Sources */,
+				4E88AD621DC88BE800C79102 /* SecretFunction1ViewController.m in Sources */,
 				4E1F77091DC6D7D40089F423 /* AppDelegate.m in Sources */,
 				4E1F77061DC6D7D40089F423 /* main.m in Sources */,
 				4E1F77201DC6F4B30089F423 /* KeychainWrapper.m in Sources */,

@@ -150,7 +150,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1073" y="396"/>
         </scene>
         <!--Function Choice View Controller-->
         <scene sceneID="4Km-jv-3Sg">
@@ -180,11 +180,17 @@
                                         <frame key="frameInset" minX="49.59%" minY="50.00%" width="119" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Secret Function 1"/>
+                                        <connections>
+                                            <action selector="secretFunction1Touched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="5iy-2G-QzM"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXC-ne-8jv">
                                         <frame key="frameInset" minX="50.42%" minY="78.76%" width="121" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Secret Function 2"/>
+                                        <connections>
+                                            <action selector="secretFunction2Touched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="xgH-6E-52l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -200,10 +206,258 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="buySecretFunction1View" destination="Le5-ZH-N8J" id="agV-37-FIf"/>
+                        <outlet property="buySecretFunction2View" destination="Ar4-Sy-axD" id="EBU-ZJ-iWd"/>
+                        <outlet property="specialOfferViewSecretFunc1" destination="R4j-bA-1YO" id="2RA-Pw-mLc"/>
+                        <outlet property="specialOfferViewSecretFunc2" destination="Isl-w6-y1s" id="KGE-r4-gLH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6Z-eL-rQ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Le5-ZH-N8J">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lg6-0F-DvS">
+                            <frame key="frameInset" height="47.38%"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xN7-fq-SX3">
+                                    <frame key="frameInset" minX="4.27%" minY="65.39%" width="95.47%" height="160"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text"> To use this feature, you need to pay for it.
+ This feature let you blah blah blah.
+ The price of this feature is 1.99 US dollar.
+ Now here is special promotion for you!
+ If you buy Secret Function1 and Secret Function2 together, We offer this two feature with 2.99 US dollar.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvB-HO-dfm">
+                                    <frame key="frameInset" minX="50.29%" minY="18.31%" width="202" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GYu-8e-Tup">
+                                    <frame key="frameInset" minX="0.0%" minY="100.00%" width="100.00%" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzF-vD-D5Y">
+                                            <frame key="frameInset" minY="47.62%" width="108" height="31" maxX="62"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Buy this feature"/>
+                                            <connections>
+                                                <action selector="buySecretFunction1OnlyTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="14w-8X-0cX"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWZ-1a-rO0">
+                                            <frame key="frameInset" minX="63" minY="47.62%" width="48" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Cancel"/>
+                                            <connections>
+                                                <action selector="dismissSecretFucntionViewsCancelBtnTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="l5z-EG-mqw"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-bA-1YO">
+                            <frame key="frameInset" minY="346" height="83.80%"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special Offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EC8-JP-n8J">
+                                    <frame key="frameInset" minX="111" minY="24" width="153" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIa-X4-guT">
+                                    <frame key="frameInset" minX="50.00%" minY="89.96%" width="123" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Buy Both features"/>
+                                    <connections>
+                                        <action selector="buySecretFunctionSetTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="vPX-1k-NzC"/>
+                                    </connections>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="256-u6-Ot6">
+                                    <frame key="frameInset" minX="50.00%" minY="49.65%" width="343" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="Ar4-Sy-axD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Isl-w6-y1s">
+                            <frame key="frameInset" minY="346" height="83.80%"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Special Offer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYT-8v-m1E">
+                                    <frame key="frameInset" minX="111" minY="24" width="153" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MxB-CX-IYi">
+                                    <frame key="frameInset" minX="50.00%" minY="89.96%" width="123" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Buy Both features"/>
+                                    <connections>
+                                        <action selector="buySecretFunctionSetTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="ciQ-nx-Iwz"/>
+                                    </connections>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JgT-vp-5Il">
+                                    <frame key="frameInset" minX="50.00%" minY="49.65%" width="343" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-Gu-8m6">
+                            <frame key="frameInset" width="375" height="316"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcM-dW-swu">
+                                    <frame key="frameInset" minX="50.29%" minY="18.88%" width="202" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4GJ-9J-Bas">
+                                    <frame key="frameInset" minX="4.27%" minY="65.39%" width="91.47%" height="160"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <string key="text"> To use this feature, you need to pay for it.
+ This feature let you blah blah blah.
+ The price of this feature is 1.99 US dollar.
+ Now here is special promotion for you!
+ If you buy Secret Function1 and Secret Function2 together, We offer this two feature with 2.99 US dollar.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="And-BR-nRg">
+                                    <frame key="frameInset" minX="0.0%" minY="100.00%" width="100.00%" height="52"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-aM-zKk">
+                                            <frame key="frameInset" minX="63" minY="45.45%" width="48" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Cancel"/>
+                                            <connections>
+                                                <action selector="dismissSecretFucntionViewsCancelBtnTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="f1T-6p-Oc6"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6d-oe-Rzk">
+                                            <frame key="frameInset" minY="45.45%" width="108" height="30" maxX="62"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Buy this feature"/>
+                                            <connections>
+                                                <action selector="buySecretFunction2OnlyTouched:" destination="vG6-1m-lzm" eventType="touchUpInside" id="GPi-Qa-Y6l"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="2269.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="2569" y="395"/>
+        </scene>
+        <!--Secret Function1 View Controller-->
+        <scene sceneID="g90-Ib-oyu">
+            <objects>
+                <viewController storyboardIdentifier="secretFunction1ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vyd-kh-Tul" customClass="SecretFunction1ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jue-Fb-J4e"/>
+                        <viewControllerLayoutGuide type="bottom" id="7yk-vp-5zq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hSB-d0-wIb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 1 Purchased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f47-OI-4hs">
+                                <frame key="frameInset" minX="50.00%" minY="19.97%" width="219" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWB-uM-vjC">
+                                <frame key="frameInset" minX="26" minY="25" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="secretFunction1ViewControllerBackBtnTouched:" destination="Vyd-kh-Tul" eventType="touchUpInside" id="ljp-Ao-DrZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7jU-su-72d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4217" y="394"/>
+        </scene>
+        <!--Secret Function2 View Controller-->
+        <scene sceneID="gzz-Bw-6gv">
+            <objects>
+                <viewController storyboardIdentifier="secretFunction2ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aUS-QX-llT" customClass="SecretFunction2ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ue-mH-XFh"/>
+                        <viewControllerLayoutGuide type="bottom" id="wGp-qD-qqM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VBc-u9-oUr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Secret Function 2 Purchased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo4-lk-ukc">
+                                <frame key="frameInset" minX="78" minY="129" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC1-uC-LqQ">
+                                <frame key="frameInset" minX="26" minY="25" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="secretFunction2ViewControllerBactBtnTouched:" destination="aUS-QX-llT" eventType="touchUpInside" id="bZu-o9-HSN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h67-Wj-Cdz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4907" y="391"/>
         </scene>
         <!--Hide Info View Controller-->
         <scene sceneID="Nch-Mm-ILN">
@@ -232,7 +486,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Bl-k6-0pi">
-                                <frame key="frameInset" minX="50.00%" minY="49.92%" width="55" height="30"/>
+                                <frame key="frameInset" minX="50.00%" minY="49.77%" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
@@ -249,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZP-GL-0oZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2270" y="-514"/>
+            <point key="canvasLocation" x="4217" y="-1081"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="4Ao-P9-n0B">
@@ -345,7 +599,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3254" y="-514"/>
+            <point key="canvasLocation" x="4218" y="-421"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vVX-Al-plf">
@@ -364,7 +618,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWg-XW-wiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="113" y="396"/>
         </scene>
     </scenes>
 </document>

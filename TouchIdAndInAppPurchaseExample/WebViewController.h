@@ -20,5 +20,5 @@
 - (IBAction)refreshBtnTouched:(id)sender;
 - (IBAction)addressFieldResignWhenWebViewTapped:(id)sender;
 - (IBAction)backToFunctionChoiceBtnTouched:(id)sender;
-- (IBAction)authWebViewConfirmBtnTouched:(id)sender;
+
 @end
