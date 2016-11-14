@@ -26,6 +26,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Authentication with Touch ID
 - (void) authenticateUser{
     LAContext *contextForAuth = [[LAContext alloc] init];
     NSError *authError = nil;
@@ -49,7 +50,7 @@
     }
 }
 
-
+#pragma mark - Authentication with password
 - (IBAction)hideInfoConfirmBtnTouched:(id)sender {
     if([self.hideInfoPasswordField.text isEqualToString:[self.keychainWrapperForPassword myObjectForKey:(__bridge id)kSecValueData]]){
         [self.navigationController popViewControllerAnimated:YES];
@@ -63,6 +64,7 @@
 
 }
 
+#pragma mark - TextField Delegate
 //delegate for limiting string number
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     if((self.hideInfoPasswordField.text.length >= 4) && range.length == 0){

@@ -29,6 +29,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Text Field delegate
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    [textField selectAll:textField.text];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if(textField.text.length == 0){
         return NO;
@@ -44,6 +49,7 @@
     return YES;
 }
 
+#pragma mark - Activity Indicator setting
 - (void)webViewDidStartLoad:(UIWebView *)webView{
     self.activityIndicatorView.hidden = NO;
 }
@@ -52,10 +58,7 @@
     self.activityIndicatorView.hidden = YES;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField{
-    [textField selectAll:textField.text];
-}
-
+#pragma mark - Web view delegate
 //if a page is not found, search it from google
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     NSString *googleSearch = @"http://www.google.com/search?q=";
@@ -71,6 +74,7 @@
     return YES;
 }
 
+#pragma mark - Button Actions
 - (IBAction)prevBtnTouched:(id)sender {
     [self.authWebView goBack];
 }
@@ -87,13 +91,16 @@
     [self.authWebView reload];
 }
 
+- (IBAction)backToFunctionChoiceBtnTouched:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - Keyboard dismiss
 - (IBAction)addressFieldResignWhenWebViewTapped:(id)sender {
     [self.authWebViewAddressField resignFirstResponder];
 }
 
-- (IBAction)backToFunctionChoiceBtnTouched:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
+
 
 
 @end

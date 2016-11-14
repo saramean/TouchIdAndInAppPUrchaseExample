@@ -74,6 +74,7 @@
     }
 }
 
+#pragma mark - Back to Authentication
 - (IBAction)functionChoiceBackBtnTouched:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -232,11 +233,6 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-- (IBAction)restorePurchasementBtnTouched:(id)sender {
-    //restore purchasement
-    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
-}
-
 
 #pragma mark - Product request delegate
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
@@ -348,6 +344,13 @@
         }
     }
 }
+
+#pragma mark - Purchasement restore
+- (IBAction)restorePurchasementBtnTouched:(id)sender {
+    //restore purchasement
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+}
+
 
 //restore transaction
 - (void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue{
